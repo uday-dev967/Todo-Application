@@ -1,0 +1,48 @@
+GET http://localhost:3001/todos/
+
+###
+
+GET http://localhost:3001/todos/?status=TO%20DO
+
+###
+
+GET http://localhost:3001/todos/?priority=HIGH
+
+###
+
+GET http://localhost:3001/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+
+GET http://localhost:3001/todos/?search_q=Play
+
+###
+
+GET http://localhost:3001/todos/?limit=5&search_q=reactjs&priority=HIGH
+
+###
+
+GET http://localhost:3001/todos/6/
+
+###
+PUT http://localhost:3001/todos/6/
+Content-Type: application/json
+
+{
+      "status": "IN PROGRESS"
+}
+
+###
+PUT http://localhost:3001/todos/6/
+Content-Type: application/json
+
+{
+      "priority": "HIGH"
+}
+###
+PUT http://localhost:3001/todos/6/
+Content-Type: application/json
+
+{
+      "todo": "Some task"
+}
